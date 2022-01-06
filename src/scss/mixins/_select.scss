@@ -1,0 +1,18 @@
+@mixin select {
+  position: relative;
+  width: 160px;
+  height: 46px;
+  padding-left: 15px;
+  border: 1px solid #f3f3f3;
+  border-bottom: 1px solid #ddd;
+  background: #f3f3f3 url("../images/select_arrow_down.png") no-repeat top 50% right 13px;
+  color: #000;
+  font-size: 15px;
+  appearance: none;
+  &:focus,
+  &:hover {
+    border-color: $red;
+    background-color: #fff;
+  }
+  @content;
+}

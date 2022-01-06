@@ -1,0 +1,82 @@
+.alliance-services {
+  box-sizing: border-box;
+  margin-top: 73px;
+  padding: 135px 0 50px;
+  background: url("./images/alliance_services_bg.jpeg") no-repeat;
+  background-size: cover;
+  .header {
+    @include section-header;
+    margin-bottom: 70px;
+    .container {
+      width: 1070px;
+    }
+  }
+  .content {
+    .container {
+      width: 1280px;
+      ul {
+        display: flex;
+        gap: 30px;
+        li {
+          width: 20%;
+          height: 270px;
+          .card {
+            position: relative;
+            display: block;
+            box-sizing: border-box;
+            height: 100%;
+            padding-top: 130px;
+            border: 3px solid #fff;
+            background-color: rgb(255 255 255 / 90%);
+            text-align: center;
+            &::before {
+              content: "";
+              position: absolute;
+              top: 40px;
+              right: 0;
+              left: 0;
+              width: 82px;
+              height: 59px;
+              margin: 0 auto;
+              background: url("./images/alliance_services_sprites.png") -5px -72px;
+            }
+            &:hover {
+              border: 3px solid $red;
+            }
+            h4 {
+              margin-bottom: 1rem;
+              color: #000;
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 1;
+            }
+            p {
+              color: #151515;
+              font-size: 14px;
+            }
+          }
+          &:nth-child(2) .card::before {
+            width: 64px;
+            height: 62px;
+            background-position: -189px -5px;
+          }
+          &:nth-child(3) .card::before {
+            width: 78px;
+            height: 57px;
+            background-position: -5px -5px;
+          }
+          &:nth-child(4) .card::before {
+            width: 50px;
+            height: 60px;
+            background-position: -97px -77px;
+          }
+          &:nth-child(5) .card::before {
+            width: 86px;
+            height: 52px;
+            background-position: -93px -5px;
+          }
+        }
+      }
+    }
+  }
+}

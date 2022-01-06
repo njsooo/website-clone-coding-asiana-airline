@@ -1,0 +1,211 @@
+#scroll-down {
+  position: absolute;
+  top: 758px;
+  right: 0;
+  left: -90px;
+  width: 1280px;
+  margin: 0 auto;
+  #btn-scroll-down {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: content-box;
+    width: 18px;
+    height: 153px;
+    padding: 4px 2px;
+    border-radius: 50px;
+    background-color: #fff;
+    animation: scroll-up-down 1s linear infinite;
+    z-index: 1;
+    .text-img {
+      position: absolute;
+      top: 4px;
+      right: 0;
+      left: 0;
+      width: 18px;
+      height: 153px;
+      margin: 0 auto;
+      background: url("./images/icon_sprites.png") -527px -137px;
+    }
+    .arrow {
+      position: absolute;
+      top: 32px;
+      right: 0;
+      left: 0;
+      width: 12px;
+      height: 7px;
+      margin: 0 auto;
+      background: url("./images/icon_sprites.png") -500px -19px;
+      animation: arrow 1.4s 0s linear infinite;
+      z-index: 100;
+      &:last-child {
+        animation: arrow 1.4s 0.7s linear infinite;
+      }
+    }
+  }
+  @keyframes scroll-up-down {
+    0% {
+      opacity: 0.5;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(9px);
+    }
+    100% {
+      opacity: 0.5;
+      transform: translateY(0);
+    }
+  }
+  @keyframes arrow {
+    0% {
+      opacity: 0;
+      transform: translateY(2px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(9px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+  }
+}
+
+#right-wing {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  transition: all 0.4s;
+  transform: translateX(100px);
+  z-index: 1000;
+  &.on {
+    transform: translateX(0);
+  }
+  button {
+    position: relative;
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    font-size: 14px;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("./images/icon_sprites.png");
+    }
+  }
+  .quick-menu {
+    display: flex;
+    flex-direction: column-reverse;
+    .btn-open {
+      margin-bottom: 12px;
+      border-radius: 50%;
+      background-color: #ec1e27;
+      z-index: 1;
+      &::before {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        margin: auto;
+        background-position: -416px -27px;
+        transition:
+          transform 0.35s,
+          background-color 0.35s;
+      }
+      &.on {
+        background-color: #564949;
+        &::before {
+          transform: rotate(135deg);
+        }
+      }
+    }
+    ul {
+      &.on {
+        li {
+          margin-bottom: 10px;
+          opacity: 1;
+        }
+      }
+      li {
+        position: relative;
+        height: 60px;
+        margin-bottom: -60px;
+        opacity: 0;
+        transition:
+          margin 0.5s,
+          opacity 0.5s;
+        button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          overflow: hidden;
+          border-radius: 30px;
+          transition: width 0.35s;
+          &:hover {
+            width: 180px;
+          }
+          &::before {
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+          }
+        }
+        &.flight-booking {
+          button {
+            background-color: #ec1e27;
+            &::before {
+              background-position: 0 -169px;
+            }
+          }
+        }
+        &.reservation-check {
+          button {
+            background-color: #252d7d;
+            &::before {
+              background-position: -61px -169px;
+            }
+          }
+        }
+        &.check-in {
+          button {
+            background-color: #562f68;
+            &::before {
+              background-position: -122px -169px;
+            }
+          }
+        }
+        &.departure-arrival-check {
+          button {
+            background-color: #dda50c;
+            &::before {
+              background-position: -183px -169px;
+            }
+          }
+        }
+        span {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+  .to-top {
+    border-radius: 50%;
+    background-color: #887c71;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12px;
+      height: 20px;
+      background-position: -431px -27px;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

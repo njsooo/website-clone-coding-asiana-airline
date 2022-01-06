@@ -1,0 +1,55 @@
+#modal-coupon {
+  position: fixed;
+  top: 200px;
+  right: 0;
+  left: 0;
+  display: none;
+  box-sizing: border-box;
+  width: 500px;
+  height: 285px;
+  margin: 0 auto;
+  background-color: #fff;
+  z-index: 1000;
+  .btn-close-x {
+    top: 40px;
+    right: 40px;
+  }
+  .header {
+    padding: 40px;
+    h5 {
+      margin-bottom: 20px;
+      font-size: 23px;
+      line-height: 29px;
+    }
+    .desc {
+      font-size: 15px;
+      word-break: keep-all;
+      .red {
+        color: $red;
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    a {
+      display: block;
+      box-sizing: border-box;
+      width: 175px;
+      height: 46px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      line-height: 46px;
+      text-align: center;
+      &:hover {
+        border-color: #000;
+      }
+    }
+    .btn-close {
+      width: 130px;
+    }
+  }
+}
