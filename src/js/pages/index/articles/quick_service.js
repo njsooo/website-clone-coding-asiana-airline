@@ -27,12 +27,14 @@ function initNavModalMode() {
 
   const $nav = $("#quick-service .container .nav");
   const $navLiList = $("#quick-service .container .nav > li");
+  const $btnCloseModalMode = $("#quick-service .container > .btn-close-modal-mode");
 
   $navLiList.each((i, li) => {
     const $li = $(li);
 
     $li.find(".btn-activate-modal-mode").on("click", () => {
       closeOpenedDropdown();
+      $btnCloseModalMode.css({ display: "block" });
       $navLiList.removeClass("on");
       $li.addClass("on");
       $nav.addClass("on");
@@ -48,6 +50,7 @@ function initNavModalMode() {
         window.onclick = (e) => {
           if ($nav.hasClass("on") && $(e.target).closest($nav).length === 0) {
             window.onclick = null;
+            $btnCloseModalMode.css({ display: "" });
             $nav.removeClass("on");
             $body.removeClass("quick-service-nav-on");
             $navLiList.removeClass("on");
