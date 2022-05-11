@@ -1,0 +1,692 @@
+#quick-service {
+  $quick-service-gray: #737373;
+  .container {
+    position: relative;
+    .btn-scroll-down {
+      position: absolute;
+      top: -6px;
+      left: -50px;
+      padding: 4px 2px;
+      border-radius: 50px;
+      background-color: $white;
+      opacity: 0.5;
+      animation: btn-scroll-down-animation 1s linear infinite;
+      z-index: $swiper-z-index;
+      .text-img {
+        display: block;
+        width: 18px;
+        height: 153px;
+        background: url("./assets/icons/sprite_sheet_1.png") -527px -137px;
+      }
+      .arrow {
+        position: absolute;
+        top: 31px;
+        right: 0;
+        left: 0;
+        display: block;
+        width: 12px;
+        height: 7px;
+        margin: 0 auto;
+        background: url("./assets/icons/sprite_sheet_1.png") -500px -19px;
+        opacity: 0;
+        animation: arrow-animation 1.4s linear infinite;
+        &:nth-child(2) {
+          animation-delay: 0.7s;
+        }
+      }
+    }
+    .nav {
+      $nav-btn-height: 65px;
+
+      position: absolute;
+      top: -$nav-btn-height;
+      display: flex;
+      transition: top 0.6s;
+      z-index: $swiper-z-index;
+      &.on {
+        top: -705px;
+        .contents {
+          .container {
+            box-shadow: none;
+          }
+        }
+      }
+      > li {
+        .btn-activate-modal-mode {
+          position: relative;
+          width: 190px;
+          height: $nav-btn-height;
+          border-radius: 10px 10px 0 0;
+          color: $white;
+          font-size: 18px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            background-image: url("./assets/icons/sprite_sheet_1.png");
+          }
+        }
+        .contents {
+          position: absolute;
+          left: 0;
+          display: none;
+          .container {
+            border-radius: 0 0 10px 10px;
+            background-color: $white;
+            box-shadow: 5px 15px 20px 1px #d0d0d0;
+            .title {
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 1.3;
+            }
+            form {
+              .component-wrap {
+                position: relative;
+                ~ .component-wrap {
+                  margin-left: 20px;
+                }
+                input[type="text"] {
+                  box-sizing: border-box;
+                  height: $component-height;
+                  padding-left: 5px;
+                  border-bottom: 2px solid #999;
+                  outline: none;
+                  cursor: pointer;
+                }
+                select {
+                  @include select(215px, $component-height);
+                }
+                .btn-open-modal {
+                  position: absolute;
+                  top: -2px;
+                  right: 7px;
+                  bottom: 0;
+                  margin: auto 0;
+                }
+              }
+            }
+          }
+        }
+        &.flight-booking {
+          .btn-activate-modal-mode {
+            padding-left: 35px;
+            background-color: rgb(211 10 20 / 80%);
+            &::before {
+              left: 34px;
+              width: 25px;
+              height: 25px;
+              background-position: 0 -81px;
+            }
+          }
+          .contents {
+            .container {
+              padding: 30px 50px;
+              .condition {
+                display: flex;
+                .mileage-use {
+                  position: relative;
+                  box-sizing: border-box;
+                  width: 177px;
+                  height: $component-height;
+                  padding: 0 20px;
+                  border-radius: 2px;
+                  background-color: $white-smoke;
+                  .text {
+                    font-size: 15px;
+                    line-height: $component-height;
+                  }
+                  .switch {
+                    position: absolute;
+                    top: 15px;
+                    right: 20px;
+                    input[type="checkbox"] {
+                      @include blind;
+                      &:checked {
+                        + .slider {
+                          background-color: #ea838a;
+                          &::before {
+                            content: "ON";
+                            color: $red;
+                            transform: translateX(10px);
+                          }
+                        }
+                      }
+                    }
+                    .slider {
+                      $transition-duration: 0.4s;
+
+                      position: relative;
+                      display: block;
+                      width: 42px;
+                      height: 16px;
+                      border-radius: 3px;
+                      background-color: $light-gray;
+                      box-shadow: inset 1px 1px 1px 0 rgb(0 0 0 / 10%);
+                      transition: background-color $transition-duration;
+                      cursor: pointer;
+                      &::before {
+                        $height: 24px;
+
+                        content: "OFF";
+                        position: absolute;
+                        bottom: -4px;
+                        box-sizing: border-box;
+                        width: 32px;
+                        height: $height;
+                        border: 1px solid $gray;
+                        border-radius: 3px;
+                        background-color: $white;
+                        box-shadow: 1px 1px 5px 0 rgb(0 0 0 / 10%);
+                        color: $quick-service-gray;
+                        font-size: 10px;
+                        line-height: $height;
+                        text-align: center;
+                        transition:
+                          color $transition-duration,
+                          transform $transition-duration;
+                      }
+                    }
+                  }
+                }
+                .trip-type {
+                  display: flex;
+                  &::before {
+                    @include vertical-bar(1px, 36px, 15px, 15px, $gray);
+
+                    top: 5px;
+                  }
+                  li {
+                    > a,
+                    > button {
+                      display: block;
+                      width: 107px;
+                      height: $component-height;
+                      background-color: $white-smoke;
+                      color: $light-black;
+                      font-size: 15px;
+                      line-height: $component-height;
+                      text-align: center;
+                    }
+                    &.round-trip {
+                      &.on {
+                        > button {
+                          border-radius: 4px 0 0 4px;
+                        }
+                      }
+                    }
+                    &.one-way {
+                      &.on {
+                        + li {
+                          &::before {
+                            background-color: transparent;
+                          }
+                        }
+                      }
+                    }
+                    &.multi {
+                      position: relative;
+                      a {
+                        box-sizing: border-box;
+                        padding-left: 27px;
+                        text-align-last: left;
+                      }
+                      &::before {
+                        @include vertical-bar(1px, 20px, 0, 0, $light-gray);
+
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto 0;
+                      }
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        top: 1px;
+                        right: 27px;
+                        bottom: 0;
+                        width: 7px;
+                        height: 11px;
+                        margin: auto 0;
+                        background: url("./assets/icons/sprite_sheet_2.png") -40px 0;
+                      }
+                      &.on {
+                        &::before {
+                          background-color: transparent;
+                        }
+                        > a {
+                          border-radius: 0 4px 4px 0;
+                        }
+                      }
+                    }
+                    &.on {
+                      > a,
+                      > button {
+                        background-color: $red;
+                        color: $white;
+                      }
+                    }
+                  }
+                }
+                .interest-route {
+                  position: relative;
+                  > button {
+                    position: relative;
+                    width: $component-height;
+                    height: $component-height;
+                    margin-left: 15px;
+                    border-radius: 3px;
+                    background-color: $white-smoke;
+                    &::before {
+                      content: "";
+                      position: absolute;
+                      top: 0;
+                      right: 0;
+                      bottom: 0;
+                      left: 0;
+                      width: 18px;
+                      height: 18px;
+                      margin: auto;
+                      background: url("./assets/icons/sprite_sheet_2.png") 0 0;
+                    }
+                  }
+                  .dropdown {
+                    @include dropdown;
+
+                    top: 55px;
+                    left: -255px;
+                    box-sizing: border-box;
+                    width: 588px;
+                    height: 131px;
+                    padding: 15px 30px;
+                    .btn-close {
+                      @include icon-x;
+
+                      position: absolute;
+                      top: 15px;
+                      right: 30px;
+                    }
+                    .title {
+                      font-weight: 700;
+                      font-size: 18px;
+                    }
+                    .desc {
+                      margin-top: 10px;
+                      font-size: 15px;
+                    }
+                    .link-list {
+                      display: flex;
+                      margin-top: 10px;
+                      li {
+                        ~ li {
+                          margin-left: 9px;
+                        }
+                        a {
+                          display: block;
+                          box-sizing: border-box;
+                          height: 34px;
+                          padding: 7px 15px;
+                          border-radius: 3px;
+                          font-size: 13px;
+                          &.about {
+                            border: 1px solid $gray;
+                            color: $black;
+                            &::before {
+                              content: "";
+                              display: inline-block;
+                              vertical-align: bottom;
+                              width: 20px;
+                              height: 20px;
+                              margin-right: 7px;
+                              background: url("./assets/icons/sprite_sheet_3.png") -58px -51px;
+                            }
+                            &:hover {
+                              &::before {
+                                background-position-y: -71px;
+                              }
+                            }
+                          }
+                          &.login {
+                            border: 1px solid $red;
+                            background-color: $red;
+                            color: $white;
+                            &:hover {
+                              border-color: 1px solid #b3000b;
+                              background-color: #b3000b;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  &.on {
+                    > button {
+                      background-color: #c42b25;
+                      &::before {
+                        background-position-x: -82px;
+                      }
+                    }
+                    .dropdown {
+                      display: block;
+                    }
+                  }
+                }
+                .btn-open-modal-coupon {
+                  position: relative;
+                  width: 102px;
+                  height: $component-height;
+                  margin-left: auto;
+                  padding-left: 22px;
+                  border: 1px solid $gray;
+                  border-radius: 3px;
+                  color: $black;
+                  font-size: 15px;
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    top: 17px;
+                    left: 9px;
+                    width: 18px;
+                    height: 12px;
+                    background: url("./assets/icons/sprite_sheet_3.png")  -5px -51px;
+                  }
+                  &:hover {
+                    border-color: $black;
+                  }
+                }
+              }
+              form {
+                $component-height: 56px;
+
+                display: flex;
+                margin-top: 20px;
+                .component-wrap {
+                  input[type="text"] {
+                    width: 196px;
+                    height: $component-height;
+                    border-bottom-color: #5c5f67;
+                  }
+                }
+                .btn-submit {
+                  @include btn-gray(100px, $component-height);
+
+                  margin-left: 20px;
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+        &.reservation-check {
+          .btn-activate-modal-mode {
+            padding-left: 33px;
+            background-color: rgb(124 6 50 / 80%);
+            &::before {
+              left: 43px;
+              width: 23px;
+              height: 23px;
+              background-position: -26px -81px;
+            }
+          }
+          .contents {
+            .container {
+              padding: 47px 39px 30px 45px;
+              form {
+                display: flex;
+                margin-top: 30px;
+                .component-wrap {
+                  input[type="text"] {
+                    width: 172px;
+                  }
+                }
+                .btn-submit {
+                  @include btn-gray(230px, $component-height);
+
+                  margin-left: 20px;
+                }
+              }
+              .typing-example {
+                margin-top: 5px;
+                span {
+                  position: relative;
+                  display: inline-block;
+                  padding-left: 14px;
+                  color: $quick-service-gray;
+                  font-size: 15px;
+                  &::before {
+                    @include bullet;
+
+                    left: 2px;
+                  }
+                  &.typing-example-1 {
+                    width: 750px;
+                  }
+                  &.typing-example-2 {
+                    font-weight: 700;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.check-in {
+          .btn-activate-modal-mode {
+            padding-left: 50px;
+            background-color: rgb(34 42 115 / 80%);
+            &::before {
+              left: 45px;
+              width: 40px;
+              height: 23px;
+              background-position: -50px -81px;
+            }
+          }
+          .contents {
+            .container {
+              $padding-left: 45px;
+
+              padding: 47px 0 30px;
+              .title {
+                padding-left: $padding-left;
+              }
+              .alert {
+                position: relative;
+                box-sizing: border-box;
+                height: 40px;
+                margin-top: 30px;
+                padding-left: $padding-left;
+                border-bottom: 1px solid $light-gray;
+                background-color: #f0f0f0;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  bottom: 0;
+                  left: 40px;
+                  width: 20px;
+                  height: 20px;
+                  margin: auto 0;
+                  background: url("./assets/icons/sprite_sheet_3.png") -5px -5px;
+                }
+                .desc {
+                  padding-left: 25px;
+                  font-size: 15px;
+                  line-height: 40px;
+                }
+              }
+              form {
+                display: flex;
+                margin-top: 30px;
+                padding-left: $padding-left;
+                .component-wrap {
+                  input[type="text"] {
+                    width: 335px;
+                  }
+                }
+              }
+              .btn-submit {
+                @include btn-gray(248px, $component-height);
+
+                margin-left: 20px;
+              }
+            }
+          }
+        }
+        &.departure-arrival-check {
+          .btn-activate-modal-mode {
+            padding-left: 37px;
+            background-color: rgb(212 157 2 / 80%);
+            &::before {
+              left: 33px;
+              width: 27px;
+              height: 27px;
+              background-position: -91px -81px;
+            }
+          }
+          .contents {
+            .container {
+              padding: 47px 0 35px 45px;
+              form {
+                display: flex;
+                margin-top: 30px;
+                .component-wrap {
+                  input[type="text"] {
+                    width: 215px;
+                  }
+                }
+                .btn-submit {
+                  @include btn-gray(252px, $component-height);
+
+                  margin-left: 20px;
+                }
+              }
+              .typing-example {
+                margin-top: 7px;
+                .typing-example-1 {
+                  position: relative;
+                  display: block;
+                  margin-left: 705px;
+                  padding-left: 14px;
+                  color: $quick-service-gray;
+                  font-weight: 700;
+                  font-size: 15px;
+                  &::before {
+                    @include bullet;
+
+                    left: 2px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.hotel-car {
+          .btn-activate-modal-mode {
+            padding-left: 48px;
+            background-color: rgb(100 90 80 / 80%);
+            &::before {
+              left: 26px;
+              width: 38px;
+              height: 25px;
+              background-position: -119px -81px;
+            }
+          }
+          .contents {
+            .container {
+              padding: 30px 0 50px;
+              .desc {
+                width: 1100px;
+                height: 49px;
+                margin: 0 auto;
+                background-color: #f2f2f2;
+                font-size: 20px;
+                line-height: 49px;
+                text-align: center;
+              }
+              .ad-list {
+                $img-width: 591px;
+                $border-width: 1px;
+
+                display: flex;
+                width: calc($img-width * 2 + $border-width);
+                margin: 0 auto;
+                margin-top: 45px;
+                li {
+                  width: 50%;
+                  padding-bottom: 13px;
+                  text-align: center;
+                  &:first-child {
+                    border-right: $border-width solid $light-gray;
+                  }
+                  a {
+                    $height: 60px;
+                    @include btn-gray(252px, $height);
+
+                    display: inline-block;
+                    margin-top: 35px;
+                    font-size: 15px;
+                    line-height: $height;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.on {
+          .btn-activate-modal-mode {
+            background-color: $white;
+            color: $red;
+            &::before {
+              background-position-y: -109px;
+            }
+          }
+          .contents {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.quick-service-nav-on {
+    #quick-service {
+      .container {
+        .btn-scroll-down {
+          filter: blur(2px);
+        }
+      }
+    }
+  }
+}
+
+@keyframes btn-scroll-down-animation {
+  0% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(9px);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+}
+
+@keyframes arrow-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(9px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}

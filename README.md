@@ -1,8 +1,8 @@
-# Asiana Airlines Clone Coding
+# Website Clone Coding - Asiana Airlines
 
-clone coding by myself
+IE 11 support.
 
 ## Links
 
-- [ORIGIN](https://flyasiana.com/C/KR/KO/index)
-- [DEMO](https://hungry-pare-30fd74.netlify.app)
+- [Origin](https://flyasiana.com/C/KR/KO/index)
+- [Demo]()

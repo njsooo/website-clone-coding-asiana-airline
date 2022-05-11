@@ -1,0 +1,254 @@
+#footer {
+  $footer-gray: #909090;
+
+  background-color: #252523;
+  .container {
+    position: relative;
+    width: 1180px;
+    padding: 50px 0 100px;
+    .menu {
+      display: flex;
+      .column {
+        box-sizing: border-box;
+        width: 33.333333%;
+        ~ .column {
+          padding-left: 20px;
+        }
+        .title {
+          color: $white;
+          font-weight: 700;
+        }
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 10px;
+          li {
+            width: 55%;
+            line-height: 1.3125;
+            &:nth-child(even) {
+              width: 45%;
+            }
+            a {
+              color: $footer-gray;
+              font-size: 14px;
+              &:hover {
+                color: $red;
+                text-decoration: underline;
+              }
+              &.badge {
+                position: relative;
+                color: $white;
+                font-weight: 700;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: -1px;
+                  right: -26px;
+                  width: 22px;
+                  height: 22px;
+                  background: url("./assets/icons/sprite_sheet_1.png") -343px -50px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    address {
+      margin-top: 50px;
+      ul {
+        display: flex;
+        ~ ul {
+          margin-top: 5px;
+        }
+        li {
+          color: $footer-gray;
+          font-size: 13px;
+          ~ li {
+            &::before {
+              @include vertical-bar($vertical-bar-width, $vertical-bar-height, 10px, 10px, $vertical-bar-color);
+            }
+          }
+        }
+        &:nth-child(1) {
+          align-items: center;
+          li {
+            &.corp {
+              color: $white;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 1;
+              + li {
+                &::before {
+                  margin: 0 0 0 13px;
+                  background-color: transparent;
+                }
+              }
+            }
+            a {
+              &.business-number {
+                margin-left: 4px;
+                color: #ed1c24;
+                text-decoration: underline;
+                &:hover {
+                  color: #6b2900;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .copy {
+      display: flex;
+      margin-top: 8px;
+      color: $footer-gray;
+      font-size: 14px;
+      a {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        height: 23px;
+        margin-left: 12px;
+        padding: 0 28px 4px 7px;
+        border: 1px solid $footer-gray;
+        border-radius: 3px;
+        color: #6d6d6d;
+        font-size: 12px;
+        line-height: 20px;
+        ~ a {
+          margin-left: 8px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 8px;
+          bottom: 0;
+          width: 11px;
+          height: 11px;
+          margin: auto 0;
+          background: url("./assets/icons/sprite_sheet_1.png") -343px -38px;
+        }
+        &:hover {
+          border-color: $white;
+          color: $white;
+        }
+      }
+    }
+    .logo-list {
+      display: flex;
+      align-items: center;
+      margin-top: 28px;
+      li {
+        &:nth-child(1) {
+          a {
+            display: block;
+            width: 234px;
+            height: 23px;
+            background: url("./assets/icons/sprite_sheet_1.png") 0 -145px;
+          }
+        }
+        &:nth-child(2) {
+          width: 176px;
+          height: 60px;
+          margin-left: 30px;
+          background-image: url("./assets/icons/skytrax.png");
+        }
+        &:nth-child(3) {
+          width: 163px;
+          height: 55px;
+          margin-left: 10px;
+          background: url("./assets/icons/sprite_sheet_1.png") 0 -294px;
+        }
+      }
+    }
+    .sns-link-list {
+      position: absolute;
+      top: 196px;
+      right: 0;
+      display: flex;
+      li {
+        ~ li {
+          margin-left: 10px;
+        }
+        a {
+          display: block;
+          width: 30px;
+          height: 30px;
+          background: url("./assets/icons/sprite_sheet_1.png") 0 -230px;
+          &:hover {
+            background-position-y: -261px;
+          }
+        }
+        &:nth-child(2) {
+          a {
+            background-position-x: -124px;
+          }
+        }
+        &:nth-child(3) {
+          a {
+            background-position-x: -31px;
+          }
+        }
+        &:nth-child(4) {
+          a {
+            background-position-x: -62px;
+          }
+        }
+        &:nth-child(5) {
+          a {
+            background-position-x: -155px;
+          }
+        }
+      }
+    }
+    .qr-code-list {
+      position: absolute;
+      top: 265px;
+      right: 0;
+      display: flex;
+      li {
+        position: relative;
+        display: block;
+        width: 90px;
+        height: 90px;
+        border-radius: 5px 5px 0 0;
+        background-color: $white;
+        ~ li {
+          margin-left: 20px;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 60px;
+          height: 60px;
+          margin: auto;
+          background: url("./assets/icons/sprite_sheet_1.png") -279px -219px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -30px;
+          left: 0;
+          width: 100%;
+          height: 30px;
+          background-image: url("./assets/icons/google_play.jpeg");
+        }
+        &.apple {
+          &::before {
+            background-position-x: -340px;
+          }
+          &::after {
+            background-image: url("./assets/icons/apple_store.jpeg");
+          }
+        }
+      }
+    }
+  }
+}

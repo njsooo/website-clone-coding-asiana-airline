@@ -1,0 +1,105 @@
+#event {
+  margin-top: 100px;
+  .header {
+    .container {
+      position: relative;
+      width: 1070px;
+      .title {
+        @include title;
+      }
+      .desc {
+        @include desc;
+      }
+      .more {
+        @include more;
+      }
+    }
+  }
+  .contents {
+    margin-top: 45px;
+    .container {
+      position: relative;
+      width: 1070px;
+      .swiper-button-prev,
+      .swiper-button-next {
+        top: 45%;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: url("./assets/icons/sprite_sheet_1.png") 0 0;
+      }
+      .swiper-button-prev {
+        left: -40px;
+        background-position-x: -181px;
+      }
+      .swiper-button-next {
+        right: -40px;
+        background-position-x: -262px;
+      }
+      .swiper-container {
+        .card {
+          display: block;
+          .img-wrap {
+            overflow: hidden;
+            height: 322px;
+            img {
+              height: 100%;
+              transform: translate(-18%);
+            }
+          }
+          .desc {
+            position: relative;
+            height: 160px;
+            padding: 0 30px;
+            background-color: $white-smoke;
+            &::after {
+              content: "";
+              position: absolute;
+              right: 10px;
+              bottom: 10px;
+              width: 42px;
+              height: 42px;
+              background: url("./assets/icons/sprite_sheet_3.png") -145px -5px;
+            }
+            .badge {
+              display: inline-block;
+              height: 26px;
+              margin-top: 20px;
+              padding: 0 10px;
+              border-radius: 2px;
+              background-color: $white;
+              font-weight: 700;
+              font-size: 12px;
+              line-height: 25px;
+              &.red {
+                border: 1px solid #c8004c;
+                color: #c8004c;
+              }
+              &.orange {
+                border: 1px solid #e32323;
+                color: #e32323;
+              }
+              &.purple {
+                border: 1px solid #8816c3;
+                color: #8816c3;
+              }
+            }
+            .title {
+              margin-top: 12px;
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 1.3;
+              letter-spacing: -0.05rem;
+              word-break: keep-all;
+            }
+            .date {
+              margin-top: 12px;
+              color: #5a5a5a;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

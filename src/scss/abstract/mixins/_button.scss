@@ -1,0 +1,18 @@
+@mixin btn($width, $height, $bg-color, $color, $hover-bg-color) {
+  width: $width;
+  height: $height;
+  border-radius: 3px;
+  background-color: $bg-color;
+  color: $color;
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+}
+
+@mixin btn-red($width, $height) {
+  @include btn($width, $height, $red, $white, $dark-red);
+}
+
+@mixin btn-gray($width, $height) {
+  @include btn($width, $height, $raven, $white, $mako);
+}

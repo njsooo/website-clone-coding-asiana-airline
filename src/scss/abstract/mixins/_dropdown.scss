@@ -1,0 +1,7 @@
+@mixin dropdown {
+  position: absolute;
+  display: none;
+  border: 1px solid $gray;
+  background-color: $white;
+  z-index: $dropdown-z-index;
+}

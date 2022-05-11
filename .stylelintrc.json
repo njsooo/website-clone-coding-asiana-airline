@@ -1,38 +1,27 @@
 {
   "extends": "stylelint-config-standard-scss",
-  "plugins": [
-    "stylelint-order"
-  ],
+  "plugins": ["stylelint-scss", "stylelint-order"],
   "rules": {
-    "no-descending-specificity": null,
+    "number-max-precision": null,
     "value-no-vendor-prefix": null,
-    "block-closing-brace-newline-before": "always",
-    "declaration-empty-line-before": "never",
+    "property-no-vendor-prefix": null,
+    "no-descending-specificity": null,
     "font-family-name-quotes": "always-unless-keyword",
     "rule-empty-line-before": [
       "always",
       {
-        "except": [
-          "after-single-line-comment",
-          "inside-block"
-        ]
+        "except": ["after-single-line-comment", "inside-block"]
       }
     ],
     "at-rule-empty-line-before": [
       "always",
       {
-        "except": [
-          "inside-block"
-        ],
-        "ignore": [
-          "after-comment"
-        ],
-        "ignoreAtRules": [
-          "use",
-          "import"
-        ]
+        "except": ["inside-block", "blockless-after-same-name-blockless"],
+        "ignore": ["after-comment", "blockless-after-blockless"],
+        "ignoreAtRules": ["use", "import"]
       }
     ],
+    "scss/dollar-variable-empty-line-before": null,
     "order/order": [
       "dollar-variables",
       "custom-properties",
@@ -40,7 +29,13 @@
         "type": "at-rule",
         "name": "include"
       },
+      "at-rules",
       "declarations",
+      "rules",
+      {
+        "type": "at-rule",
+        "name": "media"
+      },
       {
         "type": "at-rule",
         "name": "content"
@@ -167,6 +162,12 @@
       "border-bottom-right-image",
       "border-bottom-left-image",
 
+      "outline",
+      "outline-width",
+      "outline-style",
+      "outline-color",
+      "outline-offset",
+
       "background",
       "background-color",
       "background-image",
@@ -181,11 +182,6 @@
       "object-fit",
       "box-decoration-break",
       "box-shadow",
-      "outline",
-      "outline-width",
-      "outline-style",
-      "outline-color",
-      "outline-offset",
       "color",
       "table-layout",
       "caption-side",

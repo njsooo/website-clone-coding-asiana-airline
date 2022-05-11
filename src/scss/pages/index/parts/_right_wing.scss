@@ -1,0 +1,133 @@
+#right-wing {
+  $btn-width: 60px;
+  $btn-height: $btn-width;
+  $transition-duration: 0.35s;
+
+  position: fixed;
+  right: -$btn-width;
+  bottom: 50px;
+  transition: right $transition-duration;
+  z-index: $header-z-index;
+  &.on {
+    right: 30px;
+  }
+  button {
+    position: relative;
+    width: $btn-width;
+    height: $btn-height;
+    border-radius: 50%;
+  }
+  .quick-menu {
+    display: flex;
+    flex-direction: column-reverse;
+    .btn-toggle-menu {
+      background-color: #ec1e27;
+      transition: background-color $transition-duration;
+      z-index: 1;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        margin: auto;
+        background: url("./assets/icons/sprite_sheet_1.png") -416px -27px;
+        transition: transform $transition-duration;
+      }
+    }
+    ul {
+      li {
+        position: relative;
+        height: $btn-height;
+        margin-bottom: -$btn-height;
+        opacity: 0;
+        transition:
+          margin $transition-duration,
+          opacity $transition-duration;
+        button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          overflow: hidden;
+          border-radius: 30px;
+          transition: width $transition-duration;
+          span {
+            margin-left: 8px;
+            color: $white;
+            font-size: 14px;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $btn-width;
+            height: $btn-height;
+            background-image: url("./assets/icons/sprite_sheet_1.png");
+          }
+          &.flight-booking {
+            background-color: #ec1e27;
+            &::before {
+              background-position: 0 -169px;
+            }
+          }
+          &.reservation-check {
+            background-color: #252d7d;
+            &::before {
+              background-position: -61px -169px;
+            }
+          }
+          &.check-in {
+            background-color: #562f68;
+            &::before {
+              background-position: -122px -169px;
+            }
+          }
+          &.departure-arrival-check {
+            background-color: #dda50c;
+            &::before {
+              background-position: -183px -169px;
+            }
+          }
+          &:hover {
+            width: 180px;
+          }
+        }
+      }
+    }
+    &.on {
+      .btn-toggle-menu {
+        background-color: #564949;
+        &::before {
+          transform: rotate(135deg);
+        }
+      }
+      ul {
+        li {
+          margin-bottom: 10px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .btn-to-top {
+    position: relative;
+    margin-top: 12px;
+    background-color: #887c71;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 12px;
+      height: 20px;
+      margin: auto;
+      background: url("./assets/icons/sprite_sheet_1.png") -431px -27px;
+    }
+  }
+}

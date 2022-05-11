@@ -1,5 +1,3 @@
-module.exports = ({ env }) => ({
-  plugins: [
-    env === "production" ? require("autoprefixer") : false
-  ]
+module.exports = (env) => ({
+  plugins: [env.mode === "production" ? require("autoprefixer") : false],
 });

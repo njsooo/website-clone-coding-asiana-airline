@@ -1,0 +1,101 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-alert {
+    width: 20px;
+    height: 20px;
+    background-position: -5px -5px;
+}
+
+.sprite-chat_off {
+    width: 45px;
+    height: 36px;
+    background-position: -35px -5px;
+}
+
+.sprite-chat_on {
+    width: 45px;
+    height: 36px;
+    background-position: -90px -5px;
+}
+
+.sprite-coupon {
+    width: 18px;
+    height: 12px;
+    background-position: -5px -51px;
+}
+
+.sprite-earth {
+    width: 15px;
+    height: 15px;
+    background-position: -33px -51px;
+}
+
+.sprite-info {
+    width: 20px;
+    height: 40px;
+    background-position: -58px -51px;
+}
+
+.sprite-more {
+    width: 18px;
+    height: 18px;
+    background-position: -88px -51px;
+}
+
+.sprite-my_off {
+    width: 28px;
+    height: 27px;
+    background-position: -5px -79px;
+}
+
+.sprite-my_on {
+    width: 28px;
+    height: 27px;
+    background-position: -88px -79px;
+}
+
+.sprite-search_off {
+    width: 22px;
+    height: 23px;
+    background-position: -5px -116px;
+}
+
+.sprite-search_on {
+    width: 22px;
+    height: 23px;
+    background-position: -37px -116px;
+}
+
+.sprite-select_arrow {
+    width: 12px;
+    height: 8px;
+    background-position: -116px -51px;
+}
+
+.sprite-slide_pause {
+    width: 9px;
+    height: 10px;
+    background-position: -126px -69px;
+}
+
+.sprite-slide_play {
+    width: 9px;
+    height: 12px;
+    background-position: -126px -89px;
+}
+
+.sprite-star {
+    width: 42px;
+    height: 84px;
+    background-position: -145px -5px;
+}
+
+.sprite-x {
+    width: 22px;
+    height: 22px;
+    background-position: -145px -99px;
+}

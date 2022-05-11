@@ -1,0 +1,19 @@
+#skip {
+  position: relative;
+  z-index: $skip-z-index;
+  a {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #101010;
+    background-color: #444;
+    color: $white;
+    line-height: 30px;
+    text-align: center;
+    &:focus,
+    &:active {
+      top: 0;
+    }
+  }
+}

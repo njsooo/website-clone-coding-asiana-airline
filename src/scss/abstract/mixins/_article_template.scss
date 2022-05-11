@@ -1,0 +1,11 @@
+@mixin title {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1;
+}
+
+@mixin desc {
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 1.2;
+}

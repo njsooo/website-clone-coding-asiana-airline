@@ -1,7 +1,10 @@
-@import "@/scss/mixins/buttons";
-@import "@/scss/mixins/deco";
-@import "@/scss/mixins/dropdown";
-@import "@/scss/mixins/form";
-@import "@/scss/mixins/section";
-@import "@/scss/mixins/select";
-@import "@/scss/mixins/swiper"
+@import "./mixins/commons";
+@import "./mixins/vertical_bar";
+@import "./mixins/bullet";
+@import "./mixins/arrow";
+@import "./mixins/button";
+@import "./mixins/select";
+@import "./mixins/dropdown";
+@import "./mixins/icon_list";
+@import "./mixins/more";
+@import "./mixins/article_template";

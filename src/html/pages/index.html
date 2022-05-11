@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <!-- Google Fonts -->
+    <include src="google_fonts.html"></include>
+  </head>
+  <body>
+    <include src="skip.html"></include>
+    <!-- // SKIP -->
+
+    <include src="fixed_header.html"></include>
+    <!-- // HEADER -->
+
+    <main>
+      <article id="main-slide">
+        <div class="container">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#" class="item">
+                  <img class="bg" src="./assets/images/main_slide_1.jpeg" />
+                  <img class="text-img" src="./assets/images/main_slide_1_text.png" />
+                </a>
+              </div>
+              <!-- // MAIN SLIDE - 1 -->
+
+              <div class="swiper-slide">
+                <a href="#" class="item">
+                  <img class="bg" src="./assets/images/main_slide_2.jpeg" />
+                  <img class="text-img" src="./assets/images/main_slide_2_text.jpeg" />
+                </a>
+              </div>
+              <!-- // MAIN SLIDE - 2 -->
+
+              <div class="swiper-slide">
+                <a href="#" class="item">
+                  <img class="bg" src="./assets/images/main_slide_3.jpeg" />
+                  <img class="text-img" src="./assets/images/main_slide_3_text.jpeg" />
+                </a>
+              </div>
+              <!-- // MAIN SLIDE - 3 -->
+
+              <div class="swiper-slide">
+                <a href="#" class="item">
+                  <img class="bg" src="./assets/images/main_slide_4.jpeg" />
+                  <img class="text-img" src="./assets/images/main_slide_4_text.jpeg" />
+                </a>
+              </div>
+              <!-- // MAIN SLIDE - 4 -->
+
+              <div class="swiper-slide">
+                <a href="#" class="item">
+                  <img class="bg" src="./assets/images/main_slide_5.jpeg" />
+                  <img class="text-img" src="./assets/images/main_slide_5_text.jpeg" />
+                </a>
+              </div>
+              <!-- // MAIN SLIDE - 5 -->
+            </div>
+            <div class="swiper-pagination"></div>
+            <button class="btn-toggle-play icon-pause"></button>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </article>
+      <!-- // MAIN SLIDE -->
+
+      <article id="quick-service">
+        <div class="container">
+          <button class="btn-scroll-down" aria-label="최저가 간편 조회로 이동">
+            <span class="text-img"></span>
+            <span class="arrow"></span>
+            <span class="arrow"></span>
+          </button>
+          <!-- // QUICK SERVICE - BTN SCROLL DOWN -->
+
+          <ul class="nav">
+            <li class="flight-booking on">
+              <button type="button" class="btn-activate-modal-mode">항공권 예약</button>
+              <div class="contents">
+                <div class="container">
+                  <div class="condition">
+                    <div class="mileage-use">
+                      <span class="text">마일리지 사용</span>
+                      <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+
+                    <ul class="trip-type">
+                      <li class="round-trip on"><button type="button">왕복</button></li>
+                      <li class="one-way"><button type="button">편도</button></li>
+                      <li class="multi"><a href="#">다구간</a></li>
+                    </ul>
+
+                    <div class="interest-route">
+                      <button
+                        type="button"
+                        aria-label="관심노선으로 빠른여정 선택, 모달창 열기"
+                      ></button>
+                      <div class="dropdown">
+                        <button class="btn-close" aria-label="관심노선창 닫기"></button>
+                        <h5 class="title">관심 노선</h5>
+                        <p class="desc">
+                          설정한 관심노선이 없습니다. 마이아시아나에서 관심노선을 설정하실 수
+                          있습니다.
+                        </p>
+                        <ul class="link-list">
+                          <li><a href="#" class="about">관심노선이란?</a></li>
+                          <li><a href="#" class="login">로그인</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <button class="btn-open-modal-coupon">쿠폰 선택</button>
+                  </div>
+
+                  <form action="#">
+                    <div class="component-wrap departure-airport">
+                      <input type="text" placeholder="출발지" />
+                      <button
+                        type="button"
+                        class="btn-open-modal icon-location"
+                        aria-label="출발지 선택창 열기"
+                      ></button>
+                    </div>
+
+                    <div class="component-wrap arrival-airport">
+                      <input type="text" placeholder="도착지" />
+                      <button
+                        type="button"
+                        class="btn-open-modal icon-location"
+                        aria-label="도착지 선택창 열기"
+                      ></button>
+                    </div>
+
+                    <div class="component-wrap date-pick">
+                      <input type="text" placeholder="탑승일" />
+                      <button
+                        type="button"
+                        class="btn-open-modal icon-calendar"
+                        aria-label="탑승일 선택창 열기"
+                      ></button>
+                    </div>
+
+                    <div class="component-wrap passenger">
+                      <input type="text" placeholder="탑승객" />
+                      <button
+                        type="button"
+                        class="btn-open-modal icon-passenger"
+                        aria-label="탑승객 선택창 열기"
+                      ></button>
+                    </div>
+
+                    <div class="component-wrap seat">
+                      <input type="text" placeholder="좌석등급" />
+                      <button
+                        type="button"
+                        class="btn-open-modal icon-seat"
+                        aria-label="좌석등급 선택창 열기"
+                      ></button>
+                    </div>
+
+                    <button type="submit" class="btn-submit">조회</button>
+                  </form>
+                </div>
+              </div>
+            </li>
+            <!-- // QUICK SERVICE - NAV 1 FLIGHT BOOKING -->
+
+            <li class="reservation-check">
+              <button type="button" class="btn-activate-modal-mode">예약 조회</button>
+              <div class="contents">
+                <div class="container">
+                  <h2 class="title">예약하신 항공권의 여정을 편리하게 확인하실 수 있습니다.</h2>
+
+                  <form action="#">
+                    <div class="component-wrap reservation-number">
+                      <input type="text" placeholder="예약번호" />
+                    </div>
+
+                    <div class="component-wrap departure-airport">
+                      <input type="text" placeholder="출발지" />
+                      <button
+                        type="button"
+                        class="btn-open-modal icon-location"
+                        aria-label="출발지 선택창 열기"
+                      ></button>
+                    </div>
+
+                    <div class="component-wrap arrival-airport">
+                      <input type="text" placeholder="도착지" />
+                      <button
+                        type="button"
+                        class="btn-open-modal icon-location"
+                        aria-label="도착지 선택창 열기"
+                      ></button>
+                    </div>
+
+                    <div class="component-wrap date-pick">
+                      <input type="text" placeholder="탑승일" />
+                      <button
+                        type="button"
+                        class="btn-open-modal icon-calendar"
+                        aria-label="탑승일 선택창 열기"
+                      ></button>
+                    </div>
+
+                    <div class="component-wrap passenger-family-name">
+                      <input type="text" placeholder="탑승객 성" />
+                    </div>
+
+                    <button type="submit" class="btn-submit">예약 조회</button>
+                  </form>
+
+                  <div class="typing-example">
+                    <span class="typing-example-1">
+                      예약번호는 8자리 숫자 또는 6자리 영문/숫자를 입력하세요.
+                    </span>
+                    <span class="typing-example-2">예시 : &nbsp;KIM</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- // QUICK SERVICE - NAV 2 RESERVATION CHECK -->
+
+            <li class="check-in">
+              <button type="button" class="btn-activate-modal-mode">체크인</button>
+              <div class="contents">
+                <div class="container">
+                  <h2 class="title">
+                    원하시는 좌석의 탑승권을 미리 발급받고 공항에서 대기시간을 줄이세요.
+                  </h2>
+
+                  <div class="alert">
+                    <p class="desc">팝업 차단 해제 후 이용해주시기 바랍니다.</p>
+                  </div>
+
+                  <form action="#">
+                    <div class="component-wrap">
+                      <select title="조회구분">
+                        <option value="#">예약번호</option>
+                        <option value="#">항공권번호</option>
+                      </select>
+                    </div>
+
+                    <div class="component-wrap">
+                      <input type="text" placeholder="8자리 숫자 또는 6자리 영문/숫자" />
+                    </div>
+
+                    <div class="component-wrap date-pick">
+                      <input type="text" placeholder="탑승일" />
+                      <button type="button" class="btn-open-modal icon-calendar"></button>
+                    </div>
+
+                    <button type="button" class="btn-submit">예약 조회</button>
+                  </form>
+                </div>
+              </div>
+            </li>
+            <!-- // QUICK SERVICE - NAV 3 CHECK IN -->
+
+            <li class="departure-arrival-check">
+              <button type="button" class="btn-activate-modal-mode">출도착 조회</button>
+              <div class="contents">
+                <div class="container">
+                  <h2 class="title">취항지 출도착 스케줄을 상세하게 확인하실 수 있습니다.</h2>
+
+                  <form action="#">
+                    <div class="component-wrap">
+                      <select title="조회구분">
+                        <option value="#">노선조회</option>
+                        <option value="#">편명조회</option>
+                      </select>
+                    </div>
+
+                    <div class="component-wrap">
+                      <input type="text" placeholder="출발지" />
+                      <button type="button" class="btn-open-modal icon-location"></button>
+                    </div>
+
+                    <div class="component-wrap">
+                      <input type="text" placeholder="도착지" />
+                      <button type="button" class="btn-open-modal icon-location"></button>
+                    </div>
+
+                    <div class="component-wrap">
+                      <select class="select" title="출발일">
+                        <option value="#">2022.01.04</option>
+                        <option value="#" selected="selected">2022.01.03</option>
+                        <option value="#">2022.01.02</option>
+                        <option value="#">2022.01.01</option>
+                      </select>
+                    </div>
+
+                    <button type="submit" class="btn-submit">출도착 조회</button>
+                  </form>
+
+                  <div class="typing-example">
+                    <span class="typing-example-1">출발지 기준일</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- // QUICK SERVICE - NAV 4 DEPARTURE ARRIVAL CHECK -->
+
+            <li class="hotel-car">
+              <button type="button" class="btn-activate-modal-mode">호텔/렌터카</button>
+              <div class="contents">
+                <div class="container">
+                  <p class="desc">
+                    호텔과 렌터카, 아시아나항공에서만 드리는 특별한 혜택을 확인하세요.
+                  </p>
+
+                  <ul class="ad-list">
+                    <li>
+                      <img
+                        src="./assets/images/quick_service_hotel_car_left.jpeg"
+                        alt="Booking.com 1,000원당 3마일 적립 아시아나에서만 최대 8% 캐시백 혜택을 추가로 드립니다."
+                      />
+                      <a href="#">호텔 예약하기</a>
+                    </li>
+
+                    <li>
+                      <img
+                        src="./assets/images/quick_service_hotel_car_right.jpeg"
+                        alt="1,000원당 5마일 적립 전 세계 최대 규모의 Rentalcars.com을 최저가에 이용하세요."
+                      />
+                      <a href="#">렌터카 예약하기</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- // QUICK SERVICE - NAV 5 HOTEL CAR -->
+          </ul>
+          <!-- // QUICK SERVICE - NAV -->
+        </div>
+      </article>
+      <!-- // QUICK SERVICE -->
+
+      <article id="special-price">
+        <div class="header">
+          <div class="container">
+            <h2 class="title">최저가 간편 조회</h2>
+            <p class="desc">
+              오늘부터 6개월 내 출발하는 항공편의 최저가와 출발일을 간편하게 조회하실 수 있습니다.
+            </p>
+            <a href="#" class="more">전체보기</a>
+          </div>
+        </div>
+        <!-- //  SPEICAL PRICE - HEADER -->
+
+        <div class="contents">
+          <div class="container">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="card">
+                    <img src="./assets/images/special_price_slide_1.jpg" alt="" />
+                    <div class="desc">
+                      <div class="place">
+                        <span class="departure"><span class="blind">출발지</span>서울 / 인천</span>
+                        <span class="arrival"><span class="blind">도착지</span>사이판</span>
+                      </div>
+                      <div class="one-way-or-round-trip">왕복</div>
+                      <div class="price">
+                        <span class="currency">KRW</span>
+                        <span class="number">519,900</span>
+                        <span class="tilde">~<span class="blind">부터</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- // SPECIAL PRICE - SLIDE 1 -->
+
+                <div class="swiper-slide">
+                  <a href="#" class="card">
+                    <img src="./assets/images/special_price_slide_2.jpg" alt="" />
+                    <div class="desc">
+                      <div class="place">
+                        <span class="departure"><span class="blind">출발지</span>서울 / 인천</span>
+                        <span class="arrival"><span class="blind">도착지</span>사이판</span>
+                      </div>
+                      <div class="one-way-or-round-trip">왕복</div>
+                      <div class="price">
+                        <span class="currency">KRW</span>
+                        <span class="number">519,900</span>
+                        <span class="tilde">~<span class="blind">부터</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- // SPECIAL PRICE - SLIDE 2 -->
+
+                <div class="swiper-slide">
+                  <a href="#" class="card">
+                    <img src="./assets/images/special_price_slide_3.jpg" alt="" />
+                    <div class="desc">
+                      <div class="place">
+                        <span class="departure"><span class="blind">출발지</span>서울 / 인천</span>
+                        <span class="arrival"><span class="blind">도착지</span>사이판</span>
+                      </div>
+                      <div class="one-way-or-round-trip">왕복</div>
+                      <div class="price">
+                        <span class="currency">KRW</span>
+                        <span class="number">519,900</span>
+                        <span class="tilde">~<span class="blind">부터</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- // SPECIAL PRICE - SLIDE 3 -->
+
+                <div class="swiper-slide">
+                  <a href="#" class="card">
+                    <img src="./assets/images/special_price_slide_4.jpg" alt="" />
+                    <div class="desc">
+                      <div class="place">
+                        <span class="departure"><span class="blind">출발지</span>서울 / 인천</span>
+                        <span class="arrival"><span class="blind">도착지</span>사이판</span>
+                      </div>
+                      <div class="one-way-or-round-trip">왕복</div>
+                      <div class="price">
+                        <span class="currency">KRW</span>
+                        <span class="number">519,900</span>
+                        <span class="tilde">~<span class="blind">부터</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- // SPECIAL PRICE - SLIDE 4 -->
+
+                <div class="swiper-slide">
+                  <a href="#" class="card">
+                    <img src="./assets/images/special_price_slide_5.jpg" alt="" />
+                    <div class="desc">
+                      <div class="place">
+                        <span class="departure"><span class="blind">출발지</span>서울 / 인천</span>
+                        <span class="arrival"><span class="blind">도착지</span>사이판</span>
+                      </div>
+                      <div class="one-way-or-round-trip">왕복</div>
+                      <div class="price">
+                        <span class="currency">KRW</span>
+                        <span class="number">519,900</span>
+                        <span class="tilde">~<span class="blind">부터</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- // SPECIAL PRICE - SLIDE 5 -->
+
+                <div class="swiper-slide">
+                  <a href="#" class="card">
+                    <img src="./assets/images/special_price_slide_6.jpg" alt="" />
+                    <div class="desc">
+                      <div class="place">
+                        <span class="departure"><span class="blind">출발지</span>서울 / 인천</span>
+                        <span class="arrival"><span class="blind">도착지</span>사이판</span>
+                      </div>
+                      <div class="one-way-or-round-trip">왕복</div>
+                      <div class="price">
+                        <span class="currency">KRW</span>
+                        <span class="number">519,900</span>
+                        <span class="tilde">~<span class="blind">부터</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- // SPECIAL PRICE - SLIDE 6 -->
+
+                <div class="swiper-slide">
+                  <a href="#" class="card">
+                    <img src="./assets/images/special_price_slide_7.jpg" alt="" />
+                    <div class="desc">
+                      <div class="place">
+                        <span class="departure"><span class="blind">출발지</span>서울 / 인천</span>
+                        <span class="arrival"><span class="blind">도착지</span>사이판</span>
+                      </div>
+                      <div class="one-way-or-round-trip">왕복</div>
+                      <div class="price">
+                        <span class="currency">KRW</span>
+                        <span class="number">519,900</span>
+                        <span class="tilde">~<span class="blind">부터</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- // SPECIAL PRICE - SLIDE 7 -->
+
+                <div class="swiper-slide">
+                  <a href="#" class="card">
+                    <img src="./assets/images/special_price_slide_8.jpg" alt="" />
+                    <div class="desc">
+                      <div class="place">
+                        <span class="departure"><span class="blind">출발지</span>서울 / 인천</span>
+                        <span class="arrival"><span class="blind">도착지</span>사이판</span>
+                      </div>
+                      <div class="one-way-or-round-trip">왕복</div>
+                      <div class="price">
+                        <span class="currency">KRW</span>
+                        <span class="number">519,900</span>
+                        <span class="tilde">~<span class="blind">부터</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- // SPECIAL PRICE - SLIDE 8 -->
+
+                <div class="swiper-slide">
+                  <a href="#" class="card">
+                    <img src="./assets/images/special_price_slide_9.jpg" alt="" />
+                    <div class="desc">
+                      <div class="place">
+                        <span class="departure"><span class="blind">출발지</span>서울 / 인천</span>
+                        <span class="arrival"><span class="blind">도착지</span>사이판</span>
+                      </div>
+                      <div class="one-way-or-round-trip">왕복</div>
+                      <div class="price">
+                        <span class="currency">KRW</span>
+                        <span class="number">519,900</span>
+                        <span class="tilde">~<span class="blind">부터</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- // SPECIAL PRICE - SLIDE 9 -->
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <!-- //  SPEICAL PRICE - CONTENTS -->
+      </article>
+      <!-- // SPECIAL PRICE-->
+
+      <article id="event">
+        <div class="header">
+          <div class="container">
+            <div class="title">이벤트</div>
+            <p class="desc">아시아나항공만의 특별한 혜택을 누려보세요.</p>
+            <a href="#" class="more">전체보기</a>
+          </div>
+        </div>
+        <!-- // EVENT - HEADER  -->
+
+        <div class="contents">
+          <div class="container">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="card">
+                    <div class="img-wrap">
+                      <img src="./assets/images/event_slide_1.jpeg" alt="" />
+                    </div>
+                    <div class="desc">
+                      <span class="badge purple">마일리지혜택</span>
+                      <h3 class="title">글로벌 에어(Global Air) 아시아나 체크카드 이벤트</h3>
+                      <div class="date">
+                        <span>2022-01-01<span class="blind">부터</span></span>
+                        <span>~</span>
+                        <span>2022-01-31<span class="blind">까지</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- // EVENT - SLIDE 1 -->
+
+                <div class="swiper-slide">
+                  <a href="#" class="card">
+                    <div class="img-wrap">
+                      <img src="./assets/images/event_slide_2.jpeg" alt="" />
+                    </div>
+                    <div class="desc">
+                      <span class="badge purple">마일리지혜택</span>
+                      <h3 class="title">제휴마일리지 적립하고 무료항공권 경품 도저~언!</h3>
+                      <div class="date">
+                        <span>2022-12-01<span class="blind">부터</span></span>
+                        <span>~</span>
+                        <span>2022-03-31<span class="blind">까지</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- // EVENT - SLIDE 2 -->
+
+                <div class="swiper-slide">
+                  <a href="#" class="card">
+                    <div class="img-wrap">
+                      <img src="./assets/images/event_slide_3.jpeg" alt="" />
+                    </div>
+                    <div class="desc">
+                      <span class="badge orange">항공권구매</span>
+                      <h3 class="title">세상 착한 비즈니스 특가</h3>
+                      <div class="date">
+                        <span>2020-01-02<span class="blind">부터</span></span>
+                        <span>~</span>
+                        <span>2023-12-31<span class="blind">까지</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- // EVENT - SLIDE 3 -->
+
+                <div class="swiper-slide">
+                  <a href="#" class="card">
+                    <div class="img-wrap">
+                      <img src="./assets/images/event_slide_4.jpeg" alt="" />
+                    </div>
+                    <div class="desc">
+                      <span class="badge red">아시아나라이크</span>
+                      <h3 class="title">아시아나라이크</h3>
+                      <div class="date">
+                        <span>2022-01-01<span class="blind">부터</span></span>
+                        <span>~</span>
+                        <span>2022-01-31<span class="blind">까지</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- // EVENT - SLIDE 4 -->
+
+                <div class="swiper-slide">
+                  <a href="#" class="card">
+                    <div class="img-wrap">
+                      <img src="./assets/images/event_slide_5.jpeg" alt="" />
+                    </div>
+                    <div class="desc">
+                      <span class="badge red">항공권구매</span>
+                      <h3 class="title">
+                        따뜻한 겨울, 자연속 힐링 한여름의 크리스마스를 시드니에서
+                      </h3>
+                      <div class="date">
+                        <span>2021-12-15<span class="blind">부터</span></span>
+                        <span>~</span>
+                        <span>2022-01-06<span class="blind">까지</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- // EVENT - SLIDE 5 -->
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <!-- // EVENT - CONTENTS -->
+      </article>
+      <!-- // EVENT-->
+
+      <article id="banner">
+        <div class="container">
+          <a href="#">
+            <img src="./assets/images/banner.jpeg" alt="" />
+          </a>
+        </div>
+      </article>
+      <!-- // BANNER -->
+
+      <article id="notice">
+        <div class="container">
+          <div class="header">
+            <h2 class="title">공지사항</h2>
+            <p class="desc">아시아나항공의 새로운 소식을 알려드립니다.</p>
+            <a href="#" class="more">더보기</a>
+          </div>
+          <!-- // NOTICE - HEADER -->
+
+          <div class="contents">
+            <ul class="notice-list">
+              <li>
+                <a href="#">
+                  <span class="badge">공지</span>
+                  <h4 class="title">
+                    한국 ↔ 싱가포르 트래블버블 (Vaccinated Travel Lane) 시행 및 운항 스케줄 안내
+                  </h4>
+                  <span class="date">2021.10.12</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <h4 class="title">
+                    이마트(오프라인 매장) 마일리지 적립/소진 서비스 일시 중지 안내
+                  </h4>
+                  <span class="date">2021.10.12</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <h4 class="title">한국 ↔ 미국 운항편 스케줄 안내 (21년 12월~22년 1월)</h4>
+                  <span class="date">2021.10.12</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- // NOTICE - CONTENTS -->
+        </div>
+      </article>
+      <!-- // NOTICE -->
+
+      <article id="extra-service">
+        <div class="header">
+          <div class="container">
+            <h2 class="title">제휴 서비스 안내</h2>
+            <p class="desc">아시아나항공의 다양한 제휴상품 이용하시고 편안한 여행하세요.</p>
+          </div>
+        </div>
+        <!-- // EXTRA SERVICE - HEADER -->
+
+        <div class="contents">
+          <div class="container">
+            <ul class="card-list">
+              <li>
+                <a href="#" class="card">
+                  <h5 class="title">마일리지 적립</h5>
+                  <p class="desc">제휴 신용카드 사용하고,<br />마일리지 적립하고!!</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="card">
+                  <h5 class="title">호텔</h5>
+                  <p class="desc">더 빠르고 스마트한 숙박예약<br />AGODA</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="card">
+                  <h5 class="title">렌터카</h5>
+                  <p class="desc">전세계 렌터카<br />Rentalcars.com</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="card">
+                  <h5 class="title">여행자 보험</h5>
+                  <p class="desc">해외여행의 필수품<br />메리츠여행자보험</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="card">
+                  <h5 class="title">투어&amp;액티비티</h5>
+                  <p class="desc">
+                    아시아나항공에서 항공권 예약 시<br />마이리얼트립 최대 10% 할인!
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- // EXTRA SERVICE - CONTENTS -->
+      </article>
+      <!-- // EXTRA SERVICE -->
+    </main>
+    <!-- // MAIN -->
+
+    <include src="footer.html"></include>
+    <!-- // FOOTER -->
+
+    <div id="right-wing">
+      <div class="quick-menu">
+        <button
+          type="button"
+          class="btn-toggle-menu"
+          title="퀵메뉴 열기"
+          aria-label="퀵메뉴 열기"
+        ></button>
+        <ul>
+          <li>
+            <button type="button" class="flight-booking">
+              <span>항공권 예약</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="reservation-check">
+              <span>예약 조회</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="check-in">
+              <span>체크인</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="departure-arrival-check">
+              <span>출도착 조회</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <button
+        type="button"
+        class="btn-to-top"
+        title="최상단으로 이동"
+        aria-label="최상단으로 이동"
+      ></button>
+    </div>
+    <!-- // RIGHT WING -->
+
+    <div id="modal-coupon">
+      <div class="container">
+        <button type="button" class="btn-close" aria-label="모달 쿠폰창 닫기"></button>
+
+        <div class="info">
+          <h2 class="title">쿠폰 할인가를 조회하시려면<br />여정을 선택해주세요.</h2>
+          <p class="desc">
+            항공권 조회가 아닌 단순 할인쿠폰 코드 저장은
+            <span>&ldquo;마이아시아나 &gt; 쿠폰함&rdquor; 에서 가능합니다.</span>
+          </p>
+        </div>
+
+        <div class="actions">
+          <a href="#">쿠폰함 가기</a>
+          <button type="button" class="btn-close">확인</button>
+        </div>
+      </div>
+    </div>
+    <!-- // MODAL COUPON -->
+  </body>
+</html>

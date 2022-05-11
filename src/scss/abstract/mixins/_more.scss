@@ -1,0 +1,25 @@
+@mixin more {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  box-sizing: border-box;
+  width: 146px;
+  height: 50px;
+  padding: 0 20px 0 36px;
+  border: 1px solid #1d1d1d;
+  border-radius: 4px;
+  font-weight: 700;
+  line-height: 48px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 25px;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    margin: auto 0;
+    background: url("./assets/icons/sprite_sheet_1.png") -491px 0;
+  }
+}

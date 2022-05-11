@@ -1,0 +1,16 @@
+@mixin select($width, $height) {
+  width: $width;
+  height: $height;
+  padding-left: 15px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid $light-gray;
+  background: $white-smoke url("./assets/icons/select_arrow.png") no-repeat right 13px top 50%;
+  appearance: none;
+  &::-ms-expand {
+    display: none;
+  }
+  &:hover {
+    border: 1px solid $red;
+    background-color: $white;
+  }
+}

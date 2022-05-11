@@ -1,0 +1,10 @@
+@mixin bullet {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  height: 2px;
+  margin: auto 0;
+  background-color: #555;
+}

@@ -1,0 +1,451 @@
+#header {
+
+  $container-width: 1180px;
+  &.fixed {
+    position: fixed;
+    width: 100%;
+    background-color: $white;
+    z-index: $header-z-index;
+  }
+  .util {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      width: $container-width;
+      .left,
+      .right {
+        display: flex;
+        > li {
+          > a {
+            display: inline-block;
+            margin: 10px 0 11px;
+            font-size: 13px;
+            &:hover {
+              color: $red;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .left {
+        > li {
+          ~ li {
+            position: relative;
+            &::before {
+              @include vertical-bar($vertical-bar-width, $vertical-bar-height, 15px, 15px, $vertical-bar-color);
+            }
+          }
+        }
+      }
+      .right {
+        li {
+          &:nth-child(2),
+          &:nth-child(3) {
+            position: relative;
+            &::before {
+              @include vertical-bar($vertical-bar-width, $vertical-bar-height, 15px, 15px, $vertical-bar-color);
+            }
+          }
+          &.customer-service {
+            position: relative;
+            &:hover {
+              .dropdown {
+                display: block;
+              }
+            }
+            .dropdown {
+              @include dropdown;
+
+              left: -40px;
+              padding: 20px;
+              &::before {
+                @include arrow(8px, 8px, 1px, $gray, $white, 225deg);
+
+                top: -6px;
+                left: 60px;
+              }
+              li {
+                position: relative;
+                &::before {
+                  @include bullet;
+
+                  top: 2px;
+                }
+                a {
+                  display: block;
+                  padding-left: 11px;
+                  font-size: 13px;
+                  line-height: 25px;
+                  white-space: nowrap;
+                  &:hover {
+                    color: $red;
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }
+          &.select-language {
+            position: relative;
+            margin-left: 35px;
+            > a {
+              padding-left: 10px;
+              span {
+                position: relative;
+                padding: 4px 32px 4px 4px;
+                border: 1px solid $light-white-smoke;
+                &::before,
+                &::after {
+                  content: "";
+                  position: absolute;
+                  background-image: url("./assets/icons/sprite_sheet_3.png");
+                }
+                &::before {
+                  top: 6px;
+                  left: -20px;
+                  width: 15px;
+                  height: 15px;
+                  background-position: -33px -51px;
+                }
+                &::after {
+                  top: 5px;
+                  right: 6px;
+                  width: 18px;
+                  height: 18px;
+                  background-position: -88px -51px;
+                }
+              }
+              &:hover {
+                color: $light-black;
+                text-decoration: none;
+                span {
+                  border-color: $black;
+                }
+              }
+            }
+            .dropdown {
+              @include dropdown;
+
+              left: -345px;
+              padding: 20px 25px;
+              .title {
+                font-size: 23px;
+                line-height: 1.115;
+              }
+              .btn-close {
+                @include icon-x;
+
+                position: absolute;
+                top: 22px;
+                right: 30px;
+              }
+              form {
+                margin-top: 20px;
+                white-space: nowrap;
+                .nation {
+                  @include select(200px, $component-height);
+                }
+                .language {
+                  @include select(160px, $component-height);
+
+                  margin-left: 10px;
+                }
+              }
+              .btn-submit {
+                @include btn-red(120px, $component-height);
+
+                margin-left: 10px;
+              }
+            }
+            &.on {
+              > a {
+                span {
+                  border-color: $red;
+                }
+              }
+              .dropdown {
+                display: block;
+              }
+            }
+          }
+          &.korean {
+            position: relative;
+            a {
+              text-decoration: underline;
+            }
+            &::before {
+              @include vertical-bar($vertical-bar-width, $vertical-bar-height, 2px, 20px, $vertical-bar-color);
+
+              left: 0;
+            }
+          }
+          &.english {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+  .main {
+    position: relative;
+    .mega-menu-content-bg {
+      position: absolute;
+      top: 100%;
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      background-color: $white;
+      z-index: $header-z-index;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        border-top: 1px solid #666;
+      }
+    }
+    > .container {
+      display: flex;
+      justify-content: space-between;
+      width: $container-width;
+      .logo {
+        margin-top: 15px;
+      }
+      nav {
+        position: relative;
+        margin-left: -33px;
+        .sliding-underline {
+          position: absolute;
+          bottom: 0;
+          width: 120px;
+          height: 5px;
+          background-color: #e30613;
+          visibility: hidden;
+          transition: transform 0.4s;
+          z-index: -1;
+        }
+        > ul {
+          display: flex;
+          > li {
+            > a {
+              display: block;
+              box-sizing: border-box;
+              min-width: 120px;
+              padding: 26px 40px 31px;
+              color: $black;
+              font-weight: 700;
+              font-size: 18px;
+              text-align: center;
+            }
+            .mega-menu-content {
+              position: absolute;
+              top: 83px;
+              left: 50%;
+              overflow: hidden;
+              max-height: 0;
+              visibility: hidden;
+              transform: translateX(-50%);
+              z-index: $header-z-index;
+              .container {
+                display: flex;
+                justify-content: space-between;
+                width: $container-width;
+                padding: 30px 0 40px;
+                .column {
+                  width: 100%;
+                  min-height: 250px;
+                  padding-left: 25px;
+                  border-left: 1px solid $light-gray;
+                  .title {
+                    font-weight: 700;
+                  }
+                  ul {
+                    margin-top: 30px;
+                    li {
+                      line-height: 1;
+                      ~ li {
+                        margin-top: 5px;
+                      }
+                      a {
+                        color: #555;
+                        font-size: 14px;
+                        line-height: 1.5;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .actions {
+        display: flex;
+        align-items: center;
+        > li {
+          ~ li {
+            margin-left: 32px;
+          }
+          > a {
+            display: block;
+            background-image: url("./assets/icons/sprite_sheet_3.png");
+          }
+          &.chat-bot {
+            position: relative;
+            a {
+              width: 45px;
+              height: 36px;
+              background-position: -35px -5px;
+              &:hover {
+                background-position-x: -90px;
+              }
+            }
+            .dropdown {
+              @include dropdown;
+
+              top: 55px;
+              left: -77px;
+              padding: 10px 8px;
+              box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
+              white-space: nowrap;
+              .arrow-with-box-shadow {
+                position: absolute;
+                top: -14px;
+                left: 42%;
+                overflow: hidden;
+                width: 30px;
+                height: 14px;
+                &::before {
+                  @include arrow(20px, 20px, 1px, $gray, $white, 45deg);
+
+                  top: 7px;
+                  right: 0;
+                  left: 0;
+                  margin: 0 auto;
+                  border: 1px solid $gray;
+                  box-shadow: 4px 2px 5px 2px rgb(0 0 0 / 20%);
+                }
+              }
+            }
+            &:hover {
+              .dropdown {
+                display: block;
+              }
+            }
+          }
+          &.my-asiana {
+            a {
+              width: 28px;
+              height: 27px;
+              background-position: -5px -79px;
+              &:hover {
+                background-position-x: -88px;
+              }
+            }
+          }
+          &.search {
+            position: relative;
+            a {
+              width: 22px;
+              height: 23px;
+              background-position: -5px -116px;
+              &:hover {
+                background-position-x: -37px;
+              }
+            }
+            .dropdown {
+              position: absolute;
+              top: 41px;
+              left: -479px;
+              display: none;
+              .inner {
+                @include dropdown;
+
+                position: relative;
+                display: block;
+                box-sizing: border-box;
+                width: 500px;
+                height: 86px;
+                margin: 12px 8px 8px;
+                box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
+                .arrow-with-box-shadow {
+                  position: absolute;
+                  top: -14px;
+                  right: 4px;
+                  overflow: hidden;
+                  width: 30px;
+                  height: 14px;
+                  &::before {
+                    @include arrow(20px, 20px, 1px, $gray, $white, 45deg);
+
+                    top: 7px;
+                    right: 0;
+                    left: 0;
+                    margin: 0 auto;
+                    border: 1px solid $gray;
+                    box-shadow: 4px 2px 5px 2px rgb(0 0 0 / 20%);
+                  }
+                }
+                form {
+                  padding: 20px;
+                  .btn-close {
+                    @include icon-x;
+
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                  }
+                  input {
+                    box-sizing: border-box;
+                    width: 289px;
+                    height: $component-height;
+                    padding: 0 15px;
+                    border: 1px solid transparent;
+                    border-bottom-color: $light-gray;
+                    background-color: $white-smoke;
+                    &:hover {
+                      border-color: $red;
+                      background-color: $white;
+                    }
+                  }
+                  .btn-submit {
+                    @include btn-gray(120px, $component-height);
+
+                    margin-left: 4px;
+                    &.red {
+                      background-color: $red;
+                      &:hover {
+                        background-color: $dark-red;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            &.on {
+              a {
+                background-position-x: -37px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.quick-service-nav-on {
+    #header {
+      &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(0 0 0 / 20%);
+        z-index: $skip-z-index;
+      }
+    }
+  }
+}

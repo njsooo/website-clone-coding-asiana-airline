@@ -1,0 +1,26 @@
+.blind {
+  @include blind;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 1280px;
+  height: inherit;
+  margin: 0 auto;
+}
+
+.icon-location {
+  @include icon-location;
+}
+
+.icon-calendar {
+  @include icon-calendar;
+}
+
+.icon-passenger {
+  @include icon-passenger;
+}
+
+.icon-seat {
+  @include icon-seat;
+}
