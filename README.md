@@ -4,5 +4,5 @@ IE 11 support.
 
 ## Links
 
-- [Origin](https://flyasiana.com/C/KR/KO/index)
+- [Original](https://flyasiana.com/C/KR/KO/index)
 - [Demo](https://hungry-pare-30fd74.netlify.app)
