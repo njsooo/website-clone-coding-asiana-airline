@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <!-- Google Fonts -->
+    <include src="google_fonts.html"></include>
+  </head>
+  <body>
+    <include src="skip.html"></include>
+    <!-- // SKIP -->
+
+    <include src="non_fixed_header.html"></include>
+    <!-- // HEADER -->
+
+    <div id="location-bar">
+      <div class="container">
+        <a href="/" class="link-home">
+          <span class="blind">메인으로 이동</span>
+        </a>
+        <ul>
+          <li><a href="/login.html">로그인</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- // LOCATION BAR -->
+
+    <main>
+      <article id="login">
+        <div class="container">
+          <h2 class="title">로그인</h2>
+
+          <ul class="action-type">
+            <li class="login on">
+              <button type="button">
+                <span>로그인</span>
+              </button>
+            </li>
+
+            <li class="reservation-check">
+              <button type="button">
+                <span>비로그인 예약조회</span>
+              </button>
+            </li>
+          </ul>
+
+          <div class="login-area on">
+            <form action="#">
+              <div class="login-method">
+                <label class="id-login">
+                  <span class="text">아이디 로그인</span>
+                  <input type="radio" name="login-type" value="" checked />
+                  <span class="radio"></span>
+                </label>
+
+                <label class="membership-number-login">
+                  <span class="text">회원번호 로그인</span>
+                  <input type="radio" name="login-type" value="" />
+                  <span class="radio"></span>
+                </label>
+              </div>
+
+              <input type="text" class="input-id" placeholder="아이디 입력" />
+              <input type="text" placeholder="비밀번호 입력" />
+
+              <label class="checkbox-save-id">
+                <span class="text">아이디 저장</span>
+                <input type="checkbox" />
+                <span class="checkbox"></span>
+              </label>
+
+              <button type="submit" class="btn-submit">로그인</button>
+            </form>
+
+            <div class="actions">
+              <ul class="left">
+                <li><a href="#">아이디 찾기</a></li>
+                <li><a href="#">회원번호 찾기</a></li>
+                <li><a href="#">비밀번호 찾기</a></li>
+              </ul>
+              <div class="right">
+                <a href="#" class="sign-up">회원가입</a>
+              </div>
+            </div>
+
+            <ul class="sns-login">
+              <li>
+                <a href="#" class="kakao"><span>카카오톡</span><br />간편로그인</a>
+              </li>
+              <li>
+                <a href="#" class="facebook"><span>페이스북</span><br />간편로그인</a>
+              </li>
+              <li>
+                <a href="#" class="naver"><span>네이버</span><br />간편로그인</a>
+              </li>
+            </ul>
+          </div>
+          <!-- // LOGIN AREA -->
+
+          <div class="reservation-check-area">
+            <form action="#">
+              <div class="component-wrap">
+                <input type="text" placeholder="예약번호 입력 ex) 5XT9UU / 12345678" />
+              </div>
+
+              <div class="component-wrap">
+                <input type="text" placeholder="탑승일 선택" />
+                <button type="button" class="btn-open-modal-calendar icon-calendar"></button>
+              </div>
+
+              <div class="component-wrap">
+                <input type="text" placeholder="출발지 선택" />
+                <button type="button" class="btn-open-modal-location icon-location"></button>
+              </div>
+
+              <div class="component-wrap">
+                <input type="text" placeholder="도착지 선택" />
+                <button type="button" class="btn-open-modal-location icon-location"></button>
+              </div>
+
+              <div class="component-wrap">
+                <input type="text" placeholder="예약 시 입력한 영문/국문 성(Last Name, 姓) 입력" />
+              </div>
+
+              <button type="submit" class="btn-submit">예약조회</button>
+            </form>
+          </div>
+          <!-- // RESERVATION CHECK AREA -->
+        </div>
+      </article>
+    </main>
+    <!-- // MAIN -->
+
+    <include src="footer.html"></include>
+    <!-- // FOOTER -->
+  </body>
+</html>

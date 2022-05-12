@@ -395,17 +395,7 @@
                     right: 20px;
                   }
                   input {
-                    box-sizing: border-box;
-                    width: 289px;
-                    height: $component-height;
-                    padding: 0 15px;
-                    border: 1px solid transparent;
-                    border-bottom-color: $light-gray;
-                    background-color: $white-smoke;
-                    &:hover {
-                      border-color: $red;
-                      background-color: $white;
-                    }
+                    @include input(289px, $component-height);
                   }
                   .btn-submit {
                     @include btn-gray(120px, $component-height);

@@ -1,0 +1,23 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.facebook {
+    width: 161px;
+    height: 65px;
+    background-position: -5px -5px;
+}
+
+.kakao {
+    width: 161px;
+    height: 65px;
+    background-position: -5px -80px;
+}
+
+.naver {
+    width: 161px;
+    height: 65px;
+    background-position: -176px -5px;
+}
