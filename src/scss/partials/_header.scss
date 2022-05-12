@@ -56,13 +56,14 @@
             .dropdown {
               @include dropdown;
 
-              left: -40px;
+              top: 36px;
+              left: 12px;
               padding: 20px;
               &::before {
                 @include arrow(8px, 8px, 1px, $gray, $white, 225deg);
 
                 top: -6px;
-                left: 60px;
+                left: 42px;
               }
               li {
                 position: relative;
@@ -355,7 +356,7 @@
             .dropdown {
               position: absolute;
               top: 41px;
-              left: -479px;
+              left: -477px;
               display: none;
               .inner {
                 @include dropdown;
