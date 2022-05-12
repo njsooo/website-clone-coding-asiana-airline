@@ -270,6 +270,10 @@
                         color: #555;
                         font-size: 14px;
                         line-height: 1.5;
+                        &:hover {
+                          color: $red;
+                          text-decoration: underline;
+                        }
                       }
                     }
                   }
