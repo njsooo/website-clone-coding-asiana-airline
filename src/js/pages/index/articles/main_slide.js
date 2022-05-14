@@ -1,6 +1,10 @@
 import { Swiper, Navigation, Pagination, Autoplay, Lazy, A11y } from "swiper/dist/js/swiper.esm.js";
 Swiper.use([Navigation, Pagination, Autoplay, Lazy, A11y]);
 
+$(window).on("load", () => {
+  swiper.update();
+});
+
 const swiper = new Swiper("#main-slide .swiper-container", {
   slidesPerView: 1,
   loop: true,
